@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using LayoutDemo.Samples;
 using Xamarin.Forms;
 
 namespace LayoutDemo
@@ -11,15 +11,7 @@ namespace LayoutDemo
     {
         public static Page GetMainPage()
         {
-            return new ContentPage
-            {
-                Content = new Label
-                {
-                    Text = "Hello, Forms !",
-                    VerticalOptions = LayoutOptions.CenterAndExpand,
-                    HorizontalOptions = LayoutOptions.CenterAndExpand,
-                },
-            };
+            return new NavigationSample(new Page1());
         }
     }
 }
