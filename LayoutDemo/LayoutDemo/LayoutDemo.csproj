@@ -41,6 +41,7 @@
     <Compile Include="Samples\NavigationSample.cs" />
     <Compile Include="Samples\Page1.cs" />
     <Compile Include="Samples\Page2.cs" />
+    <Compile Include="Samples\TabbedSample.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
