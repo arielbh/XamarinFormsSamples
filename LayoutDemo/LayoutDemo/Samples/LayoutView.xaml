@@ -2,9 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 					   x:Class="LayoutDemo.Samples.LayoutView">
-  <AbsoluteLayout  Padding="0,40,0,0" VerticalOptions="FillAndExpand">
-	  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="30,50,200,40"  />
-    <Button Text="Do it" AbsoluteLayout.LayoutBounds="30,250,300,100"/>
-    <Entry AbsoluteLayout.LayoutBounds="0,400,200,50" />
-  </AbsoluteLayout>
+  <RelativeLayout   Padding="0,40,0,0" VerticalOptions="FillAndExpand">
+	  <Label x:Name="label" Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" 
+                        RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=10}"
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=20}" /> 
+    <Button Text="Do it"
+                         RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Width,
+                                        Factor=0.5}"
+
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                                        Property=Y, 
+                                        ElementName=label,
+                                        Constant=-5}" />
+    <Entry          RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Width,
+                                        Factor=0.4}"
+
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Height,
+                                        Factor=0.3}" />
+  </RelativeLayout>
 </ContentPage>
