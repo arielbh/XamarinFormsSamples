@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\MasterDetailsSample.cs" />
     <Compile Include="Samples\NavigationSample.cs" />
     <Compile Include="Samples\Page1.cs" />
     <Compile Include="Samples\Page2.cs" />

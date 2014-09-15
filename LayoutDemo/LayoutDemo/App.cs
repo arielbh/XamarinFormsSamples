@@ -11,7 +11,7 @@ namespace LayoutDemo
     {
         public static Page GetMainPage()
         {
-            return new TabbedSample();
+            return new MasterDetailsSample();
         }
     }
 }

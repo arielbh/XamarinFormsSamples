@@ -12,8 +12,10 @@ namespace LayoutDemo.Samples
         public Page2()
         {
             Title = "Page 2";
-            Content = new Label() {Text = "Page2"};
-
+            BindingContext = "Select your favorite crazy person";
+            var label = new Label() {VerticalOptions = LayoutOptions.Center};
+            label.SetBinding(Label.TextProperty, new Binding());
+            Content = label;
         }
     }
 }
