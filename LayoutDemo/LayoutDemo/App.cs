@@ -11,7 +11,7 @@ namespace LayoutDemo
     {
         public static Page GetMainPage()
         {
-            return new LayoutView();
+            return new NavigationPage(new LoginView { BindingContext = new LoginViewModel()});
         }
     }
 }

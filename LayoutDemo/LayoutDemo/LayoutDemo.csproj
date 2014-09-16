@@ -41,6 +41,10 @@
     <Compile Include="Samples\LayoutView.xaml.cs">
       <DependentUpon>LayoutView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Samples\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Samples\LoginViewModel.cs" />
     <Compile Include="Samples\MasterDetailsSample.cs" />
     <Compile Include="Samples\NavigationSample.cs" />
     <Compile Include="Samples\Page1.cs" />
@@ -60,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Samples\LayoutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Samples\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
