@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\AnimationsSample.cs" />
     <Compile Include="Samples\LayoutView.xaml.cs">
       <DependentUpon>LayoutView.xaml</DependentUpon>
     </Compile>
